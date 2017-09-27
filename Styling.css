@@ -141,11 +141,15 @@ border: solid 1px #000;
 overflow: auto;
 }
 
-.inputform .inputitem{
+.inputform .inputitem {
     padding: 0px 0px 20px 0px;
 }
 
-.inputform button[type="submit"]{
+.inputform .inputitem input:focus {
+        outline: none;
+}
+
+.inputform button[type="submit"] {
     font-family: Arial;
     font-size: 12px;
     padding: 6px 20px 6px 20px;
@@ -156,15 +160,15 @@ overflow: auto;
     cursor: pointer;
 }
 
-.inputform button[type="submit"]:hover{
+.inputform button[type="submit"]:hover {
     background: #B80065;
 }
 
-.inputform input[type="file"]{
+.inputform input[type="file"] {
     display: none;
 }
 
-.inputform .custom-file-upload{
+.inputform .custom-file-upload {
     font-family: Arial;
     font-size: 12px;
     padding: 6px 20px 6px 20px;
@@ -175,7 +179,7 @@ overflow: auto;
     cursor: pointer;
 }
 
-.inputform p{
+.inputform p {
     margin: 0px 0px 0px 0px;
 }
 
