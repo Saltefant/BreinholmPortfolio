@@ -1,0 +1,25 @@
+<h1>Home</h1>
+
+<div class="inputform">
+    <div class="inputitem">
+        <label>First Name:</label><br>
+        <input type="text" ng-model="firstName" class="textbox"><br>
+    </div>
+
+    <div class="inputitem">
+        <label>Last Name:</label><br>
+        <input type="text" ng-model="lastName" class="textbox"><br>
+    </div>
+
+    <div class="inputitem">
+        <label>Profile image:</label><br>
+        <label class="custom-file-upload">Gennemse<input type="file" accept=".jpg, .png"></label><br>
+    </div>
+
+    <div class="inputitem">
+    <label>Full Name:</label><br> 
+    <p>{{firstName + " " + lastName}}</p>
+    </div>
+
+    <button type="submit">Submit</button>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<title>Lasses hjemmeside</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="Styling.css"> 
+</head>
+
+
+<header>
+  <a href="#!"><div class="banner"><h1>Somes sort of portfolio</h1></div></a>
+
+<!--Navigation bar-->
+<div class="tab">
+    <div id="nav-placeholder">
+    </div>
+</div>
+<!--end of Navigation bar-->
+
+</header>
+
+<body ng-app="myApp">
+    <div class="tabcontent">
+        <div ng-view></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+        $("#nav-placeholder").load("Navigation.htm");
+        });
+    </script>
+
+    <script src="myScript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+        $routeProvider
+        .when("/", {
+            templateUrl : "./Views/Home.htm"
+        })
+        .when("/Home", {
+            templateUrl : "./Views/Home.htm"
+        })
+        .when("/Projects", {
+            templateUrl : "./Views/Projects.htm"
+        })
+        .when("/About", {
+            templateUrl : "./Views/About.htm"
+        });
+    });
+    </script>
+</body>
+
+</html> 
